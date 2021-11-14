@@ -1,0 +1,17 @@
+{
+  "name": "icator",
+  "version": "1.0.0",
+  "description": "web service for cat fans",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
