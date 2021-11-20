@@ -21,7 +21,5 @@ app.use(function (err, req, res, next) {
     res.send('500 - Server Error');
 })
 
-app.listen(app.get('port'), function () {
-    console.log('iCator started on http://localhost:' + app.get('port'));
-});
+module.exports = app;
 

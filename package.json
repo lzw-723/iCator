@@ -2,17 +2,19 @@
   "name": "icator",
   "version": "1.0.0",
   "description": "web service for cat fans",
-  "main": "index.js",
+  "main": "start.js",
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
     "@types/node": "^16.11.7",
     "mocha": "^9.1.3",
-    "mockjs": "^1.1.0"
+    "mockjs": "^1.1.0",
+    "supertest": "^6.1.6"
   },
   "scripts": {
-    "test": "mocha"
+    "start": "node start.js",
+    "test": "mocha test/**/*.js"
   },
   "author": "lzw-723",
   "license": "GPL-3.0"
