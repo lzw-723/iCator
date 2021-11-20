@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 app.set('port', process.env.PORT || 3000);
 
+app.get('/', (req, res) => {
+    res.send('Hello Cats!');
+});
+
 // 404
 app.use(function (req, res) {
     res.type('text/plain');
@@ -18,14 +22,6 @@ app.use(function (err, req, res, next) {
 })
 
 app.listen(app.get('port'), function () {
-    console.log('express started on http://localhost:' + app.get('port'));
+    console.log('iCator started on http://localhost:' + app.get('port'));
 });
 
-
-// app.get('/', (req, res) => {
-//     res.send('Hello Cats!');
-// });
-
-// app.listen(port, () => {
-//     console.log(`Example app listening at http://localhost:${port}`);
-// });
