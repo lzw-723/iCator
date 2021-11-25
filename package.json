@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "node start.js",
-    "test": "mocha test/**/*.js",
+    "test": "mocha 'test/**/*.@(js)'",
     "jsdoc": "jsdoc -c jsdoc-conf.json"
   },
   "author": "lzw-723",
