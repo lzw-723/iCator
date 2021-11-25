@@ -17,14 +17,10 @@ describe('model/cat.js', function () {
         });
 
         it('可以新建简单对象', function () {
-            let c = cat.newCat();
+            let c = cat.newSimpleCat();
             assert.notEqual(c.cid, undefined);
-            // assert.notEqual(c.color, undefined);
             assert.notEqual(c.name, undefined);
-            // assert.notEqual(c.gender, undefined);
             assert.notEqual(c.photo, undefined);
-            // assert.notEqual(c.status, undefined);
-            // assert.notEqual(c.remark, undefined);
         });
     });
 });

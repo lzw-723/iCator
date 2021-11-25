@@ -23,3 +23,4 @@ function catList() {
 }
 
 module.exports.newCat = newCat;
+module.exports.newSimpleCat = newSimpleCat;
