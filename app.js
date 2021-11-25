@@ -6,6 +6,12 @@ app.get('/', (req, res) => {
     res.send('Hello Cats!');
 });
 
+app.get('/api', (req, res) => {
+    let links = {
+    };
+    res.send(links);
+});
+
 // 404
 app.use(function (req, res) {
     res.type('text/plain');
