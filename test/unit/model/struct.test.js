@@ -1,6 +1,6 @@
 const assert = require('assert');
 const Mock = require('mockjs');
-const struct = require('../../src/model/struct');
+const struct = require('../../../src/model/struct');
 
 describe('model/struct.js', function () {
     describe('#newStruct()', function () {

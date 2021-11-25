@@ -1,6 +1,6 @@
 const assert = require('assert');
 const Mock = require('mockjs');
-const cat = require('../../src/model/cat');
+const cat = require('../../../src/model/cat');
 
 describe('model/cat.js', function () {
     describe('#newCat()', function () {
