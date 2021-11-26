@@ -115,8 +115,8 @@
 * 请求方法：`POST`
 * 请求参数：
 
-|参数名|说明|类型|可选择性|
-|-----|----|----|-------|
+|参数名|说明|类型|
+|-----|----|----|
 | name |string| 猫猫的名字 |
 |photos|array | 猫猫照片id数组 |
 |gender|number| 猫猫的性别代码：`0` - `未知`、`1` - `公`、`2` - `母` |
@@ -132,6 +132,71 @@
     "msg":"Successfully responded.",
     "data":{
         "cid":1
+    }
+}
+```
+
+### 修改猫猫
+
+修改一只猫的信息
+
+* 请求路径：`/cats/:cid`
+
+|参数名|说明|类型|
+|-----|----|----|
+|cid|猫猫id|number|
+
+* 请求方法：`PATCH`
+* 请求参数：
+
+|参数名|说明|类型|
+|-----|----|----|
+| name |string| 猫猫的名字 |
+|photos|array | 猫猫照片id数组 |
+|gender|number| 猫猫的性别代码：`0` - `未知`、`1` - `公`、`2` - `母` |
+|status|string| 猫猫的状态描述 |
+|color |string| 猫猫的毛色描述 |
+|remark|string| 备注 |
+
+* 响应数据：
+
+```json
+{
+    "code":200,
+    "msg":"Successfully responded.",
+    "data":{
+        "cid":1
+    }
+}
+```
+
+### 获取猫猫信息
+
+获取一只猫的信息
+
+* 请求路径：`/cats/:cid`
+
+|参数名|说明|类型|
+|-----|----|----|
+|cid|猫猫id|number|
+
+* 请求方法：`GET`
+* 请求参数：`无`
+
+* 响应数据：
+
+```json
+{
+    "code":200,
+    "msg":"Successfully responded.",
+    "data":{
+        "cid":1,
+        "name":"凯特",
+        "photo":1,
+        "gender":1,
+        "status":"活跃在30栋宿舍楼下",
+        "color":"灰色",
+        "remark":"性格温和，但不喜欢人接近"
     }
 }
 ```
@@ -195,6 +260,34 @@
         "uploader":"一个不知道姓名的匿名人士",
         "url":"https://www.cat.love/cat.jpg",
         "remark":"拍摄于30栋楼下草坪"
+    }
+}
+```
+
+### 新增图片
+
+新增一张图片
+
+* 请求路径：`/photos`
+* 请求方法：`POST`
+* 请求参数：
+
+|参数名|说明|类型|
+|-----|----|----|
+|cid     |number| 所属猫猫id |
+| date   |number| 照片上传时的时间戳 |
+|uploader|string| 上传者 |
+|url     |string| 图片地址 |
+|remark  |string| 备注 |
+
+* 响应数据：
+
+```json
+{
+    "code":201,
+    "msg":"Successfully responded.",
+    "data":{
+        "pid":1
     }
 }
 ```
