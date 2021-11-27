@@ -109,3 +109,6 @@ target/
 
 # jsdoc
 out/
+
+# inspirecloud
+.inspirecloud.service.conf

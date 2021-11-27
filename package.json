@@ -4,6 +4,7 @@
   "description": "web service for cat fans",
   "main": "start.js",
   "dependencies": {
+    "@byteinspire/api": "^1.0.10",
     "express": "^4.17.1"
   },
   "devDependencies": {
