@@ -1,0 +1,22 @@
+# 部署到轻服务的iCator测试环境中
+name: inspire dev
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: byteinspire/cloud-project-deployer-action@v1
+        with:
+          service-id: '${{ secrets.DEV_SERVICE_ID }}'
+          token: '${{ secrets.ACCESS_TOKEN }}'
+          directory: "."
+          changelog: "deployed by github actions"
+      - name: Check outputs
+        run: |
+          echo cloud_project_url ${{steps.byteinspire_cloud_project_deployer.outputs.cloud-project-url}}
+          echo version ${{steps.byteinspire_cloud_project_deployer.outputs.version}}
