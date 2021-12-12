@@ -103,6 +103,7 @@ dist
 # TernJS port file
 .tern-port
 
+# vscode
 .vscode/
 
 target/
@@ -112,3 +113,6 @@ out/
 
 # inspirecloud
 .inspirecloud.service.conf
+
+# sqlite
+database/*.sqlite
